@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Foodies Rider</string>
+
+
+
+
+    <string name="login">Iniciar sesión</string>
+    <string name="change_password">Cambia la contraseña</string>
+
+
+
+    <string name="continue_txt">Seguir</string>
+    <string name="welcome_txt">Bienvenidos! ¿A dónde debemos entregar</string>
+    <string name="edit_account">Editar cuenta</string>
+    <string name="recover_pass">Recuperar contraseña</string>
+    <string name="recover">Recuperar</string>
+    <string name="pending_jobs">TRABAJOS PENDIENTES</string>
+    <string name="current_jobs">TRABAJOS ACTUALES</string>
+    <string name="job">Trabajos</string>
+    <string name="today_job">Trabajos de hoy</string>
+    <string name="change_pass">Cambia la contraseña</string>
+    <string name="log_out">Cerrar sesión</string>
+    <string name="rider">Jinete</string>
+
+
+
+
+    <string name="email_hint"><font size="14">Jhon@gmail.com</font></string>
+    <string name="password_hint"><font size="14">Al menos 6 caracteres</font></string>
+    <string name="location">Ubicación</string>
+    <string name="text_switch_heading">Cambie el botón Check-in para comenzar su turno</string>
+    <string name="text_switch_btn">Nuestro personal verá que está registrado o en línea, lo que lo ayudará a asignarle pedidos y a ganar más</string>
+    <string name="text_switch_mobile">Permanecerá registrado hasta que salga cambiando el botón de abajo</string>
+
+
+    <string name="review">revisión</string>
+    <string name="save_location">Guardar dirección</string>
+    <string name="email">Correo electrónico</string>
+    <string name="code">Código</string>
+    <string name="send_code">Enviar código</string>
+    <string name="new_password">Nueva contraseña</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="change">Cambio</string>
+    <string name="search">Buscar</string>
+    <string name="cancel">Cancelar</string>
+
+
+
+    <string name="old_password">Contraseña anterior</string>
+    <string name="done">Hecho</string>
+    <string name="please_wait">Por favor espera</string>
+    <string name="password">Contraseña</string>
+    <string name="forgot_your_password">Olvidaste tu contraseña?</string>
+    <string name="accept">ACEPTAR</string>
+    <string name="give_your_reviews">Da tus comentarios</string>
+    <string name="type_review_optional">Revisión de tipo (opcional)</string>
+    <string name="submit">Enviar</string>
+    <string name="reviews">Comentarios</string>
+    <string name="checkout">Revisa</string>
+
+
+    <string name="hey_rider_looking_for_n_more_orders">Hola Rider, buscando \ n más pedidos?</string>
+    <string name="no_availability">No disponible</string>
+    <string name="online_status">Estado en línea</string>
+    <string name="online">En línea</string>
+    <string name="rastaurant_name">Nombre del restaurante</string>
+    <string name="rastaurant_address">Dirección de Rastaurant</string>
+    <string name="order_hotel_detail">PEDIR DETALLE DEL HOTEL</string>
+    <string name="restaurant_number">Número de restaurante</string>
+    <string name="order_user_detail">PEDIR DETALLE DEL USUARIO</string>
+    <string name="user_name">Nombre de usuario</string>
+    <string name="user_address">Dirección de usuario</string>
+    <string name="user_number">Número de usuario</string>
+    <string name="instructions">Instrucciones</string>
+    <string name="tax">Impuesto</string>
+
+
+    <string name="delivery_fee">Gastos de envío</string>
+    <string name="rider_tip">Consejo del jinete</string>
+    <string name="subtotal">Total parcial</string>
+    <string name="total">Total</string>
+    <string name="payment_method">Método de pago</string>
+    <string name="credit_card">Tarjeta de crédito</string>
+    <string name="pay_to_restaurant">Pagar al restaurante</string>
+    <string name="on_my_way_to_hotel">En mi camino al hotel</string>
+    <string name="whoops">Whoops!</string>
+    <string name="let_us_know">Háganos saber dónde está para que podamos recomendar eventos cercanos.</string>
+    <string name="date">Fecha</string>
+    <string name="start_end_date">Fecha de inicio y finalización</string>
+    <string name="in_process">En proceso</string>
+    <string name="confirm">Confirm</string>
+    <string name="jobs">Trabajos</string>
+    <string name="chat">Charla</string>
+    <string name="profile">Perfil</string>
+    <string name="new_message">Nuevo mensaje</string>
+
+</resources>

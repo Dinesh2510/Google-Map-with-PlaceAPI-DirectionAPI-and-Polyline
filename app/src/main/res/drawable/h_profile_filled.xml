@@ -1,0 +1,13 @@
+<vector android:height="90dp" android:viewportHeight="90"
+    android:viewportWidth="90" android:width="90dp" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:name="randomname"
+        android:translateY="12"
+        android:translateX="-6">
+
+    <path android:fillColor="@color/color_icon" android:pathData="M37.496,18.5c0,-9.65 7.86,-17.5 17.51,-17.5c9.65,0 17.5,7.85 17.5,17.5c0,9.66 -7.85,17.51 -17.5,17.51C45.356,36.01 37.496,28.16 37.496,18.5z"/>
+    <path android:fillColor="@color/color_icon" android:pathData="M90,56.53V69H20V56.52l0.738,-0.6c19.87,-14.32 49.266,-14.32 68.686,0.02L90,56.53z"/>
+
+    </group>
+</vector>

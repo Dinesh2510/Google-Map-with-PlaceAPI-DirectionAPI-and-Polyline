@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    tools:context="com.example.map.GoogleMapWork.MapsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar_add_address"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/colorPrimaryDark">
+
+
+            <TextView
+                android:id="@+id/title_city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/location"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/close_country"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/close" />
+
+        </androidx.percentlayout.widget.PercentRelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/current_address_div"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_below="@+id/toolbar_add_address">
+
+            <ImageView
+                android:id="@+id/profile_img"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/location_img"
+
+                />
+
+            <TextView
+                android:id="@+id/current_text_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/arrow"
+                android:layout_toEndOf="@+id/profile_img"
+                android:lines="2"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="normal"
+
+                />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/right_arrow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorEditTextBG" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/All_data"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_below="@+id/current_address_div"
+            android:padding="5dp">
+
+
+            <TextView
+                android:id="@+id/polylineMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/arrow"
+                android:layout_toEndOf="@+id/profile_img"
+                android:background="@drawable/round_shape_btn_login"
+                android:gravity="center_vertical"
+                android:lines="2"
+                android:padding="5dp"
+                android:text="Polyline Map"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+            <TextView
+                android:id="@+id/direction_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/arrow"
+                android:layout_toEndOf="@+id/profile_img"
+                android:background="@drawable/round_shape_btn_login"
+                android:gravity="center_vertical"
+                android:lines="2"
+                android:padding="5dp"
+                android:text="Direction Map"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/save_loc_div"
+            android:layout_below="@+id/All_data">
+
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                tools:context="com.example.map.GoogleMapWork.MapsActivity" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/marker_location" />
+
+        </RelativeLayout>
+
+
+        <androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/save_loc_div"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/save_location"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+        </androidx.percentlayout.widget.PercentRelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Foodies Rider</string>
+
+
+
+
+
+    <string name="login">تسجيل الدخول</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+
+
+
+    <string name="continue_txt">استمر</string>
+    <string name="welcome_txt">أهلا بك! إلى أين يجب أن نسلم?</string>
+    <string name="edit_account">تحرير الحساب</string>
+    <string name="recover_pass">إستعادة كلمة المرور</string>
+    <string name="recover">استعادة</string>
+    <string name="pending_jobs">وظائف معلقة</string>
+    <string name="current_jobs">الوظائف الحالية</string>
+    <string name="job">وظائف</string>
+    <string name="today_job">وظائف اليوم</string>
+    <string name="change_pass">تغيير كلمة المرور</string>
+    <string name="log_out">تسجيل خروج</string>
+    <string name="rider">رايدر</string>
+
+
+
+
+    <string name="email_hint"><font size="14">Jhon@gmail.com</font></string>
+    <string name="password_hint"><font size="14">6 أحرف على الأقل</font></string>
+    <string name="location">موقعك</string>
+    <string name="text_switch_heading">قم بتبديل زر تسجيل الوصول لبدء الوردية</string>
+    <string name="text_switch_btn">سيرى موظفونا أنك قمت بتسجيل الوصول أو عبر الإنترنت مما سيساعدهم على تعيين طلباتك ومساعدتك على كسب المزيد
+    </string>
+    <string name="text_switch_mobile">ستظل مسجلاً حتى تسجيل الخروج عن طريق التبديل أدناه الزر</string>
+
+
+    <string name="review">مراجعة</string>
+    <string name="save_location">حفظ الموقع</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="code">الشفرة</string>
+    <string name="send_code">أرسل الرمز</string>
+    <string name="new_password">كلمة السر الجديدة</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="change">يتغيرون</string>
+    <string name="search">بحث</string>
+    <string name="cancel">إلغاء</string>
+
+
+
+    <string name="old_password">كلمة سر قديمة</string>
+    <string name="done">منجز</string>
+    <string name="please_wait">أرجو الإنتظار</string>
+    <string name="password">كلمه السر</string>
+    <string name="forgot_your_password">نسيت رقمك السري?</string>
+    <string name="accept">قبول</string>
+    <string name="give_your_reviews">أعط تعليقاتك</string>
+    <string name="type_review_optional">مراجعة النوع (اختياري)</string>
+    <string name="submit">إرسال</string>
+    <string name="reviews">المراجعات</string>
+    <string name="checkout">الدفع</string>
+
+
+    <string name="hey_rider_looking_for_n_more_orders">مرحبًا رايدر ، أبحث عن \ n المزيد من الطلبات?</string>
+    <string name="no_availability">لا يوجد توافر</string>
+    <string name="online_status">الموجودين</string>
+    <string name="online">عبر الانترنت</string>
+    <string name="rastaurant_name">اسم المطعم</string>
+    <string name="rastaurant_address">عنوان المطعم</string>
+    <string name="order_hotel_detail">ترتيب الفندق بالتفصيل</string>
+    <string name="restaurant_number">رقم المطعم</string>
+    <string name="order_user_detail">تفاصيل طلب المستخدم</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="user_address">عنوان المستخدم</string>
+    <string name="user_number">رقم المستخدم</string>
+    <string name="instructions">تعليمات</string>
+    <string name="tax">ضريبة</string>
+
+
+    <string name="delivery_fee">رسوم التوصيل</string>
+    <string name="rider_tip">Rنصيحة العيدر</string>
+    <string name="subtotal">المجموع الفرعي</string>
+    <string name="total">مجموع</string>
+    <string name="payment_method">طريقة الدفع او السداد</string>
+    <string name="credit_card">بطاقة الائتمان</string>
+    <string name="pay_to_restaurant">الدفع إلى المطعم</string>
+    <string name="on_my_way_to_hotel">في طريقي إلى الفندق</string>
+    <string name="whoops">عفوًا!</string>
+    <string name="let_us_know">أخبرنا أين أنت حتى نوصي بالأحداث القريبة.</string>
+    <string name="date">تاريخ</string>
+    <string name="start_end_date">تاريخ البدء</string>
+    <string name="in_process">تحت المعالجة</string>
+    <string name="confirm">تؤكد</string>
+    <string name="jobs">وظائف</string>
+    <string name="chat">دردشة</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="new_message">رسالة جديدة</string>
+</resources>

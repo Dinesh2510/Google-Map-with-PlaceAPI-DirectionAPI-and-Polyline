@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">Map Example</string>
+
+
+    <string name="google_api_realsekey" translatable="false">@string/googleapp_key</string>
+    <string name="google_api_debug" translatable="false">@string/googleapp_key</string>
+
+
+    <string name="key_for_places" translatable="false">@string/googleapp_key</string>
+
+    <string name="googleapp_key" translatable="false">AIzaSyBH95g1k4XCq-gkKSv_7SpWGrFlj7802_M</string>
+
+
+    <string name="default_notification_channel_id" translatable="false">channel-01</string>
+
+
+    <string-array name="language_names_for_show">
+        <item>English</item>
+    </string-array>
+
+    <string-array name="language_names_for_api">
+        <item>english</item>
+
+    </string-array>
+
+    <string-array name="language_code">
+        <item>en</item>
+    </string-array>
+
+
+    <string name="arabic" translatable="false">العربية</string>
+    <string name="english" translatable="false">English</string>
+    <string name="spanish" translatable="false">español</string>
+
+    <string name="login">Login</string>
+    <string name="change_password">Change Password</string>
+
+
+    <string name="continue_txt">continue</string>
+    <string name="welcome_txt">Welcome! Here is Your Current Location</string>
+    <string name="edit_account">Edit Account</string>
+    <string name="recover_pass">Recover Password</string>
+    <string name="recover">Recover</string>
+    <string name="pending_jobs">PENDING JOBS</string>
+    <string name="current_jobs">CURRENT JOBS</string>
+    <string name="job">Jobs</string>
+    <string name="today_job">Today\'s Jobs</string>
+    <string name="change_pass">Change Password</string>
+    <string name="log_out">Logout</string>
+    <string name="rider">Rider</string>
+
+
+    <string name="email_hint"><font size="14">Jhon@gmail.com</font></string>
+    <string name="password_hint"><font size="14">At least 6 character</font></string>
+    <string name="location">Location</string>
+    <string name="text_switch_heading">Switch the Check-in button to start your shift</string>
+    <string name="text_switch_btn">Our staff will see that you are checked-in or online which will help them assign you orders and help you to earn more
+    </string>
+    <string name="text_switch_mobile">You will remain checked-in until you check-out by switching below button</string>
+
+
+    <string name="review">Review</string>
+    <string name="save_location">Save Location</string>
+    <string name="email">Email</string>
+    <string name="code">Code</string>
+    <string name="send_code">Send Code</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="change">Change</string>
+    <string name="search">Search</string>
+    <string name="cancel">Cancel</string>
+
+
+    <string name="old_password">Old Password</string>
+    <string name="done">Done</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="password">Password</string>
+    <string name="forgot_your_password">Forgot Your Password?</string>
+    <string name="accept">ACCEPT</string>
+    <string name="give_your_reviews">Give Your Reviews</string>
+    <string name="type_review_optional">Type Review (Optional)</string>
+    <string name="submit">Submit</string>
+    <string name="reviews">Reviews</string>
+    <string name="checkout">Checkout</string>
+
+
+    <string name="hey_rider_looking_for_n_more_orders">Hey Rider, looking for \n more orders?</string>
+    <string name="no_availability">No Availability</string>
+    <string name="online_status">Online Status</string>
+    <string name="online">Online</string>
+    <string name="rastaurant_name">Rastaurant Name</string>
+    <string name="rastaurant_address">Rastaurant Address</string>
+    <string name="order_hotel_detail">ORDER HOTEL DETAIL</string>
+    <string name="restaurant_number">Restaurant Number</string>
+    <string name="order_user_detail">ORDER USER DETAIL</string>
+    <string name="user_name">User Name</string>
+    <string name="user_address">User Address</string>
+    <string name="user_number">User number</string>
+    <string name="instructions">Instructions</string>
+    <string name="tax">Tax</string>
+
+
+    <string name="delivery_fee">Delivery Fee</string>
+    <string name="rider_tip">Rider Tip</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="total">Total</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="pay_to_restaurant">Pay To Restaurant</string>
+    <string name="on_my_way_to_hotel">On My Way to Hotel</string>
+    <string name="whoops">Whoops!</string>
+    <string name="let_us_know">Let us know where are you so we can recommend nearby events.</string>
+    <string name="date">Date</string>
+    <string name="start_end_date">Start End Date</string>
+    <string name="in_process">In Process</string>
+    <string name="confirm">Confirm</string>
+    <string name="jobs">Jobs</string>
+    <string name="chat">Chat</string>
+    <string name="profile">Profile</string>
+    <string name="new_message">New Message</string>
+    <string name="language">Language</string>
+    <string name="no_internet">"No Internet "</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

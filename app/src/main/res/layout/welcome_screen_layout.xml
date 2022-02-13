@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_shape_dialog_white"
+    android:clickable="true">
+
+
+    <Button
+        android:id="@+id/welcome_show_restaurants_btn"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="@dimen/dp40"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/round_shape_btn_login"
+        android:text="@string/continue_txt"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/welcome_search_div"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_above="@+id/welcome_show_restaurants_btn"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/search_background">
+
+
+        <ImageView
+            android:id="@+id/welcome_search_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/search_icon" />
+
+        <TextView
+            android:id="@+id/welcome_location_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toEndOf="@+id/welcome_search_icon"
+            android:singleLine="true"
+            android:text="Fetching Location"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/welcome_search_div"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/welcome_txt"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+
+</RelativeLayout>
