@@ -113,7 +113,8 @@ public class Direction_A extends AppCompatActivity implements OnMapReadyCallback
         } else {
             placePath = new MarkerOptions().position(latLng).title("Path");
             place1 = new MarkerOptions().position(new LatLng(drop_lat, drop_long)).title("Mumbai").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_pin));
-            place2 = new MarkerOptions().position(latLng).title("Me").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_current_loc));
+          // its ur current location  place2 = new MarkerOptions().position(latLng).title("Me").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_current_loc));
+            place2 = new MarkerOptions().position(new LatLng(19.0330, 73.0297)).title("Navi Mumbai").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_current_loc));
 
             new FetchURL(Direction_A.this).execute(getUrl(place1.getPosition(), place2.getPosition(), "driving"), "driving");
 

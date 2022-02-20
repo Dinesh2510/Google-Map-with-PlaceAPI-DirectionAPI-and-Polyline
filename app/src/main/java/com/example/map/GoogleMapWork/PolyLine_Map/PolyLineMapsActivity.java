@@ -77,6 +77,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.security.SecureRandom;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
@@ -238,7 +239,9 @@ public class PolyLineMapsActivity extends AppCompatActivity
     public void onResume() {
         super.onResume();
         // put your code here...
-        GetDataForMap();
+        GetDataForMap(); //Load from server
+        /*loadJSONFromAsset();
+        ParseJSONFromAsset();*/
         setupMapIfNeeded();
 
     }
@@ -290,7 +293,7 @@ public class PolyLineMapsActivity extends AppCompatActivity
         mGoogleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                showDialogProject(marker.getSnippet(),marker.getTitle());
+                showDialogProject(marker.getSnippet(), marker.getTitle());
                 return false;
             }
         });
@@ -522,14 +525,65 @@ public class PolyLineMapsActivity extends AppCompatActivity
 
     }
 
+    public void ParseJSONFromAsset() {
+        try {
+            JSONObject obj = new JSONObject(loadJSONFromAsset());
+            JSONArray m_jArry = obj.getJSONArray("route_data");
+            Log.e("Details-->", String.valueOf(m_jArry));
+            proPlaceListRoute = new ArrayList<>();
+
+            for (int i = 0; i < m_jArry.length(); i++) {
+                JSONObject jo_inside = m_jArry.getJSONObject(i);
+                PlaceModel placeModel = new PlaceModel();
+                placeModel.id = jo_inside.getString("id");
+                placeModel.bde_id = jo_inside.getString("bde_id");
+                placeModel.route_id = jo_inside.getString("route_id");
+                placeModel.sequence_id = jo_inside.getString("sequence_id");
+                placeModel.name = jo_inside.getString("name");
+                placeModel.latitude = jo_inside.getString("latitude");
+                placeModel.longitude = jo_inside.getString("longitude");
+                placeModel.isDeleted = jo_inside.getString("isDeleted");
+                placeModel.branchAssigned = jo_inside.getString("branchAssigned");
+                placeModel.city = jo_inside.getString("city");
+                placeModel.state = jo_inside.getString("state");
+                placeModel.contactPerson = jo_inside.getString("contactPerson");
+                placeModel.mobile = jo_inside.getString("mobile");
+                placeModel.phone = jo_inside.getString("phone");
+                placeModel.email = jo_inside.getString("email");
+                placeModel.category = jo_inside.getString("category");
+                placeModel.photo = jo_inside.getString("photo");
+
+
+                proPlaceListRoute.add(placeModel);
+            }
+            On_Data_Map();
+        } catch (JSONException e) {
+            Log.e(TAG, "ParseJSONFromAsset: "+e.toString() );
+        }
+    }
+
+    public String loadJSONFromAsset() {
+        String json = null;
+        try {
+            InputStream is = getAssets().open("polyline_data.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
 
     public void GetDataForMap() {
         final ProgressDialog progressDialog = new ProgressDialog(PolyLineMapsActivity.this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Loading..");
         progressDialog.show();
-        String FatchPlaceByRoute = "https://myjson.dit.upm.es/api/bins/4ld3";
-        //String FatchPlaceByRoute = "http://myjson.dit.upm.es/api/bins/2nx3";
+        String FatchPlaceByRoute = "https://pixeldev.in/webservices/json_file/polyline_data.json";
         StringRequest stringRequest = new StringRequest(Request.Method.GET, FatchPlaceByRoute, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -718,7 +772,7 @@ public class PolyLineMapsActivity extends AppCompatActivity
 
     Dialog dialog_details;
 
-    private void showDialogProject(String someid,String subtitle) {
+    private void showDialogProject(String someid, String subtitle) {
         dialog_details = new Dialog(this);
         dialog_details.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
         dialog_details.setContentView(R.layout.dialog_info);
