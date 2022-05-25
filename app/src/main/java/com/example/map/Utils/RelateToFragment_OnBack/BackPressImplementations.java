@@ -5,15 +5,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 
-/**
- * Created by AQEEL on 3/30/2018.
- */
 
-public class BackPressImplimentation implements OnBackPressListener {
+
+public class BackPressImplementations implements OnBackPressListener {
 
     private Fragment parentFragment;
 
-    public BackPressImplimentation(Fragment parentFragment) {
+    public BackPressImplementations(Fragment parentFragment) {
         this.parentFragment = parentFragment;
     }
 

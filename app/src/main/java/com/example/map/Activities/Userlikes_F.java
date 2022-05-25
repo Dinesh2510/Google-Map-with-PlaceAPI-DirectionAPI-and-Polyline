@@ -1,16 +1,12 @@
-package com.example.map.ActivitiesAndFragments.Activities;
+package com.example.map.Activities;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
 import com.example.map.R;
-import com.example.map.Utils.RelateToFragment_OnBack.RootFragment;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class Userlikes_F extends BottomSheetDialogFragment {

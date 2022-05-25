@@ -1,4 +1,4 @@
-package com.example.map.ActivitiesAndFragments.Activities;
+package com.example.map.Activities;
 
 import android.os.Bundle;
 
@@ -16,6 +16,7 @@ import com.example.map.Utils.RelateToFragment_OnBack.RootFragment;
  * Use the {@link Users_F#newInstance} factory method to
  * create an instance of this fragment.
  */
+
 public class Users_F extends RootFragment {
 
     // TODO: Rename parameter arguments, choose names that match

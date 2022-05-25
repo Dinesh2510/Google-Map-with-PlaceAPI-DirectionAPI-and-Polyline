@@ -1,4 +1,4 @@
-package com.example.map.ActivitiesAndFragments.Activities;
+package com.example.map.Activities;
 
 import android.content.Context;
 import android.util.AttributeSet;

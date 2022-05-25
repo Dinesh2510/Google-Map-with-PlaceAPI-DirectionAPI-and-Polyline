@@ -222,7 +222,7 @@ public class Direction_A extends AppCompatActivity implements OnMapReadyCallback
         // Output format
         String output = "json";
         // Building the url to the web service
-        String url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters + "&key=" + "AIzaSyAhJ2jyMQywcUnCOp6_7dYsJ_f_qZsGyf8";
+        String url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters + "&key=" + "your_key";
         return url;
     }
 

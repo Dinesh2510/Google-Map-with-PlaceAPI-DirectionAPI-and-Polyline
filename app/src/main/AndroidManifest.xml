@@ -31,13 +31,13 @@
             android:name=".GoogleMapWork.DirectionApi.Direction_A"
             android:exported="false" />
         <activity
-            android:name=".ActivitiesAndFragments.Activities.MainMenuActivity"
+            android:name=".Activities.MainMenuActivity"
             android:exported="false" />
         <activity
             android:name=".GoogleMapWork.PolyLine_Map.PolyLineMapsActivity"
             android:exported="false" /> <!-- Splash screen -->
         <activity
-            android:name=".ActivitiesAndFragments.Activities.SplashScreenActivity"
+            android:name=".Activities.SplashScreenActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">

@@ -1,70 +1,25 @@
-package com.example.map.ActivitiesAndFragments.Activities;
+package com.example.map.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.map.Constants.ApiRequest;
 import com.example.map.Constants.Functions;
 import com.example.map.R;
 
-import android.Manifest;
-import android.app.Dialog;
-import android.content.ContentResolver;
-import android.content.Context;
 import android.content.Intent;
 
 import android.os.Build;
-import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.CountDownTimer;
-import android.provider.ContactsContract;
-import android.provider.Settings;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
-
-import com.android.volley.AuthFailureError;
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.messaging.FirebaseMessaging;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class MainMenuActivity extends AppCompatActivity {
 

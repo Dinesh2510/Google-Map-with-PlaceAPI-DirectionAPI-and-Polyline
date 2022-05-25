@@ -1,4 +1,4 @@
-package com.example.map.ActivitiesAndFragments.Activities;
+package com.example.map.Activities;
 
 import android.Manifest;
 import android.content.Context;
@@ -43,7 +43,6 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

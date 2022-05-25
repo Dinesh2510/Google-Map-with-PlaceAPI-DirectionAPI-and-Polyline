@@ -12,6 +12,6 @@ public class RootFragment extends Fragment implements OnBackPressListener {
     @Override
     public boolean onBackPressed() {
 
-        return new BackPressImplimentation(this).onBackPressed();
+        return new BackPressImplementations(this).onBackPressed();
     }
 }
