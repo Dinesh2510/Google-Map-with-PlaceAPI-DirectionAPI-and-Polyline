@@ -26,8 +26,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -104,8 +102,8 @@ public class PolyLineMapsActivity extends AppCompatActivity
 
     GoogleMap mGoogleMap;
 
-    ArrayList<PlaceModel> proPlaceListRoute = new ArrayList<>();
-    ArrayList<PlaceModel> proPlaceListRoute_copy = new ArrayList<>();
+    ArrayList<PlaceModel> placeModelArrayList = new ArrayList<>();
+    ArrayList<PlaceModel> placeModelArrayListCopy = new ArrayList<>();
 
     private LatLng mDefaultLocation;
     private static final int DEFAULT_ZOOM = 15;
@@ -240,11 +238,10 @@ public class PolyLineMapsActivity extends AppCompatActivity
         super.onResume();
         // put your code here...
         GetDataForMap(); //Load from server
-        /*loadJSONFromAsset();
-        ParseJSONFromAsset();*/
         setupMapIfNeeded();
 
     }
+
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -525,42 +522,6 @@ public class PolyLineMapsActivity extends AppCompatActivity
 
     }
 
-    public void ParseJSONFromAsset() {
-        try {
-            JSONObject obj = new JSONObject(loadJSONFromAsset());
-            JSONArray m_jArry = obj.getJSONArray("route_data");
-            Log.e("Details-->", String.valueOf(m_jArry));
-            proPlaceListRoute = new ArrayList<>();
-
-            for (int i = 0; i < m_jArry.length(); i++) {
-                JSONObject jo_inside = m_jArry.getJSONObject(i);
-                PlaceModel placeModel = new PlaceModel();
-                placeModel.id = jo_inside.getString("id");
-                placeModel.bde_id = jo_inside.getString("bde_id");
-                placeModel.route_id = jo_inside.getString("route_id");
-                placeModel.sequence_id = jo_inside.getString("sequence_id");
-                placeModel.name = jo_inside.getString("name");
-                placeModel.latitude = jo_inside.getString("latitude");
-                placeModel.longitude = jo_inside.getString("longitude");
-                placeModel.isDeleted = jo_inside.getString("isDeleted");
-                placeModel.branchAssigned = jo_inside.getString("branchAssigned");
-                placeModel.city = jo_inside.getString("city");
-                placeModel.state = jo_inside.getString("state");
-                placeModel.contactPerson = jo_inside.getString("contactPerson");
-                placeModel.mobile = jo_inside.getString("mobile");
-                placeModel.phone = jo_inside.getString("phone");
-                placeModel.email = jo_inside.getString("email");
-                placeModel.category = jo_inside.getString("category");
-                placeModel.photo = jo_inside.getString("photo");
-
-
-                proPlaceListRoute.add(placeModel);
-            }
-            On_Data_Map();
-        } catch (JSONException e) {
-            Log.e(TAG, "ParseJSONFromAsset: "+e.toString() );
-        }
-    }
 
     public String loadJSONFromAsset() {
         String json = null;
@@ -587,7 +548,7 @@ public class PolyLineMapsActivity extends AppCompatActivity
         StringRequest stringRequest = new StringRequest(Request.Method.GET, FatchPlaceByRoute, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.d("list_places_pro", "onResponse: " + response);
+                Log.d("StringRequestList", "onResponse: " + response);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     String message = jsonObject.getString("message");
@@ -595,50 +556,25 @@ public class PolyLineMapsActivity extends AppCompatActivity
                     if (code.equals("200")) {
                         progressDialog.dismiss();
 
-                        JSONArray jsonArrayvideo = jsonObject.optJSONArray("route_data");
+                        JSONArray jsonArrayvideo = jsonObject.optJSONArray("data");
 
                         if (jsonArrayvideo != null && jsonArrayvideo.length() > 0) {
-                            proPlaceListRoute = new ArrayList<>();
-                            proPlaceListRoute_copy = new ArrayList<>();
-                            JSONArray jsonArray = jsonObject.getJSONArray("route_data");
+                            placeModelArrayList = new ArrayList<>();
+                            placeModelArrayListCopy = new ArrayList<>();
+                            JSONArray jsonArray = jsonObject.getJSONArray("data");
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 PlaceModel placeModel = new PlaceModel();
-                                JSONObject BMIReport = jsonArray.getJSONObject(i);
+                                JSONObject jsonArrayJSONObject = jsonArray.getJSONObject(i);
 
-                                placeModel.id = BMIReport.getString("id");
-                                placeModel.bde_id = BMIReport.getString("bde_id");
-                                placeModel.route_id = BMIReport.getString("route_id");
-                                placeModel.sequence_id = BMIReport.getString("sequence_id");
-                                placeModel.name = BMIReport.getString("name");
-                                placeModel.latitude = BMIReport.getString("latitude");
-                                placeModel.longitude = BMIReport.getString("longitude");
-                                placeModel.isDeleted = BMIReport.getString("isDeleted");
-                                placeModel.branchAssigned = BMIReport.getString("branchAssigned");
-                                placeModel.city = BMIReport.getString("city");
-                                placeModel.state = BMIReport.getString("state");
-                                placeModel.contactPerson = BMIReport.getString("contactPerson");
-                                placeModel.mobile = BMIReport.getString("mobile");
-                                placeModel.phone = BMIReport.getString("phone");
-                                placeModel.email = BMIReport.getString("email");
-                                placeModel.category = BMIReport.getString("category");
-                                placeModel.photo = BMIReport.getString("photo");
-
-
-                                proPlaceListRoute.add(placeModel);
-                                proPlaceListRoute_copy.add(placeModel);
+                                placeModel.id = jsonArrayJSONObject.getString("id");
+                                placeModel.name = jsonArrayJSONObject.getString("name");
+                                placeModel.latitude = jsonArrayJSONObject.getString("latitude");
+                                placeModel.longitude = jsonArrayJSONObject.getString("longitude");
+                                placeModel.city = jsonArrayJSONObject.getString("city");
+                                placeModelArrayList.add(placeModel);
+                                placeModelArrayListCopy.add(placeModel);
                             }
                             On_Data_Map();
-
-                         /*   if (proPlaceListRoute.size() > 0) {
-                                AdapterPlace adapterDesign = new AdapterPlace(proPlaceListRoute, ProPlaceLists.this);
-                                recyclerView_design.setAdapter(adapterDesign);
-                                adapterDesign.notifyDataSetChanged();
-                            } else {
-
-                            }*/
-
-                        } else {
-
                         }
 
                     } else {
@@ -646,41 +582,27 @@ public class PolyLineMapsActivity extends AppCompatActivity
                         progressDialog.dismiss();
                     }
                 } catch (JSONException e) {
-                    e.printStackTrace();
+                   ;
+                    Log.d("JSONException", "onResponse: " +e.toString());
                     progressDialog.dismiss();
                 }
 
                 progressDialog.dismiss();
-                Log.d("proPlaceListRoute", "onResponse: " + proPlaceListRoute_copy.size());
-                if (proPlaceListRoute_copy.size() > 0) {
-                    proPlaceListRoute_copy.add(proPlaceListRoute_copy.size(), proPlaceListRoute_copy.get(0));
+
+                if (placeModelArrayListCopy.size() > 0) {
+                    placeModelArrayListCopy.add(placeModelArrayListCopy.size(), placeModelArrayListCopy.get(0));
                 }
 
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Log.d("onErrorResponse", "onResponse: " +error.toString());
+
                 error.printStackTrace();
                 progressDialog.dismiss();
             }
-        }) {
-
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                HashMap<String, String> params = new HashMap();
-
-                Log.d("params", "getParams: " + params);
-                return params;
-            }
-
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                HashMap<String, String> header = new HashMap<>();
-//                header.put("token", Constant.Token);
-                return header;
-            }
-
-        };
+        });
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         RetryPolicy retryPolicy = new DefaultRetryPolicy(3000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
@@ -705,12 +627,12 @@ public class PolyLineMapsActivity extends AppCompatActivity
             mGoogleMap.getUiSettings().setRotateGesturesEnabled(true);
             mGoogleMap.getUiSettings().setMapToolbarEnabled(false);
             /*Start =>this is for Complete Polyline circle */
-            if (proPlaceListRoute_copy.size() > 0) {
-                proPlaceListRoute_copy.add(proPlaceListRoute_copy.size(), proPlaceListRoute_copy.get(0));
+            if (placeModelArrayListCopy.size() > 0) {
+                placeModelArrayListCopy.add(placeModelArrayListCopy.size(), placeModelArrayListCopy.get(0));
             }
             /* End =>this is for Complete Polyline circle */
 
-            if (proPlaceListRoute_copy != null && proPlaceListRoute_copy.size() > 0) {
+            if (placeModelArrayListCopy != null && placeModelArrayListCopy.size() > 0) {
                 PolylineOptions polylineOptions = new PolylineOptions();
                 polylineOptions.width(10);
                 List<PatternItem> pattern = Arrays.<PatternItem>asList(new Dot(), new Gap(5f));
@@ -720,18 +642,18 @@ public class PolyLineMapsActivity extends AppCompatActivity
                 polylineOptions.geodesic(true);
 
                 LatLngBounds.Builder latLngBounds = new LatLngBounds.Builder();
-                for (int i = 0; i < proPlaceListRoute_copy.size(); i++) {
-                    double placeLat = Double.parseDouble(proPlaceListRoute_copy.get(i).latitude);
-                    double placeLng = Double.parseDouble(proPlaceListRoute_copy.get(i).longitude);
+                for (int i = 0; i < placeModelArrayListCopy.size(); i++) {
+                    double placeLat = Double.parseDouble(placeModelArrayListCopy.get(i).latitude);
+                    double placeLng = Double.parseDouble(placeModelArrayListCopy.get(i).longitude);
                     Log.d(TAG, "onMapReady: " + placeLat);
                     Log.d(TAG, "onMapReady: " + placeLng);
 
                     LatLng latLng = new LatLng(placeLat, placeLng);
                     MarkerOptions dmarkerOptions = new MarkerOptions();
                     dmarkerOptions.position(latLng);
-                    dmarkerOptions.title(proPlaceListRoute_copy.get(i).city);
-                    dmarkerOptions.snippet(proPlaceListRoute_copy.get(i).name);
-                    dmarkerOptions.icon(BitmapDescriptorFactory.fromBitmap(getMarkerBitmapFromView(R.drawable.marker_location, proPlaceListRoute_copy.get(i).city)));
+                    dmarkerOptions.title(placeModelArrayListCopy.get(i).city);
+                    dmarkerOptions.snippet(placeModelArrayListCopy.get(i).name);
+                    dmarkerOptions.icon(BitmapDescriptorFactory.fromBitmap(getMarkerBitmapFromView(R.drawable.marker_location, placeModelArrayListCopy.get(i).city)));
 
                     mGoogleMap.addMarker(dmarkerOptions);
                     latLngBounds.include(latLng);

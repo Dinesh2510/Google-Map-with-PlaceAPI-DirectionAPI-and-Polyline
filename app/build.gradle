@@ -14,7 +14,7 @@ repositories {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 33
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
     buildToolsVersion
@@ -22,7 +22,7 @@ android {
     defaultConfig {
         applicationId "com.example.map"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 33
         versionCode 2
         versionName "1.0"
         multiDexEnabled true

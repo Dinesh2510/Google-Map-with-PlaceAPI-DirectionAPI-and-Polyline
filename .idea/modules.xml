@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/MapExample.iml" filepath="$PROJECT_DIR$/.idea/MapExample.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MapExample.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MapExample.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MapExample.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MapExample.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MapExample.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MapExample.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MapExample.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MapExample.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/MapExample.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/MapExample.library.iml" />
     </modules>
   </component>
